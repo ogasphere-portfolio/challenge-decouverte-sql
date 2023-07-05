@@ -1,0 +1,36 @@
+<h1 id="requetes-sql">Requetes SQL</h1>
+<h2 id="auteurs">Auteurs</h2>
+<h4 id="lister-les-auteurs">Lister les auteurs</h4>
+<p><code>select * from `author`</code></p>
+<h4 id="afficher-lauteur-ayant-lid-2">Afficher l'auteur ayant l'id 2</h4>
+<p><code>select *from `author` WHERE `id`=2</code></p>
+<h2 id="articles">Articles</h2>
+<h4 id="lister-tous-les-articles">Lister tous les articles</h4>
+<p><code>select * from `post`</code></p>
+<h4 id="afficher-larticle-ayant-lid-1">Afficher l'article ayant l'id 1</h4>
+<p><code>select \*from `post` WHERE `id`=1</code></p>
+<h1 id="bonus">Bonus</h1>
+<h2 id="auteurs-1">Auteurs</h2>
+<h4 id="lister-les-auteurs-par-ordre-alphabétique-sur-le-nom">Lister les auteurs par ordre alphabétique (sur le nom)</h4>
+<p><code>SELECT *
+FROM `author`
+ORDER BY `name`</code></p>
+<h4 id="lister-les-auteurs-dont-le-mail-contient-gmailcom">Lister les auteurs dont l'e-mail contient <a href="https://github.com/gmail.com">@gmail.com</a></h4>
+<p><code>SELECT *
+FROM `author`
+WHERE `email` LIKE '%@gmail.com'</code></p>
+<h4 id="lister-les-auteurs-qui-nont-pas-dimage-de-profil">Lister les auteurs qui n'ont pas d'image de profil</h4>
+<p><code>select * from `author` where `image` IS NULL</code></p>
+<h2 id="articles-1">Articles</h2>
+<h4 id="lister-le-titre-et-la-date-de-publication-de-tous-les-articles">Lister le titre et la date de publication de tous les articles</h4>
+<p><code>select title,published_date from `post`</code></p>
+<h4 id="afficher-le-titre-dun-article-en-particulier-en-passant-lid-de-larticle">Afficher le titre d'un article en particulier (en passant l'id de l'article)</h4>
+<p><code>select title from `post` where id=1</code></p>
+<h4 id="lister-les-2-derniers-articles-publiés">Lister les 2 derniers articles publiés</h4>
+<p><code>SELECT *
+FROM `post`
+ORDER BY `published_date` DESC
+limit 2</code></p>
+<h4 id="compter-le-nombre-darticles-doc-et-renommer-la-colonne-en-nbarticles">Compter le nombre d'articles (doc) et renommer la colonne en nbArticles</h4>
+<p><code>SELECT COUNT( title) , resume ,published_date, views AS nbArticles
+FROM `post`</code></p>

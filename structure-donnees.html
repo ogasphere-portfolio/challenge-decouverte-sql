@@ -1,0 +1,23 @@
+<h1 id="dictionnaire-de-données">Dictionnaire de données</h1>
+<h2 id="auteurs-author">Auteurs (<code>author</code>)</h2>
+<p>|Champ|Type|Spécificités|Description|<br />
+|-|-|-|-|<br />
+|id|entier|PRIMARY KEY, NOT NULL, UNSIGNED, AUTO_INCREMENT|L'identifiant de notre auteur|<br />
+|name|chaîne de caractères|NOT NULL|Le nom de l'auteur|<br />
+|image|chaîne de caractères|NULL|L'avatar de l'auteur|<br />
+|email|chaîne de caractères|NOT NULL, UNIQUE|L'e-mail de l'auteur|</p>
+<h2 id="catégories-category">Catégories (<code>category</code>)</h2>
+<p>|Champ|Type|Spécificités|Description|<br />
+|-|-|-|-|<br />
+|id|entier|PRIMARY KEY, NOT NULL, UNSIGNED, AUTO_INCREMENT|L'identifiant de la catégorie|<br />
+|name|chaîne de caractères|NOT NULL|Le nom de la catégorie|<br />
+|position|entier|NOT NULL, UNSIGNED, DEFAULT 0|La position de la catégorie dans le menu|</p>
+<h2 id="articles-post">Articles (<code>post</code>)</h2>
+<p>|Champ|Type|Spécificités|Description|<br />
+|-|-|-|-|<br />
+|id|entier|PRIMARY KEY, NOT NULL, UNSIGNED, AUTO<em>INCREMENT|L'identifiant de l'article|
+|title|chaîne de caractères|NOT NULL|Le titre de l'article|
+|resume|chaîne de caractères|NOT NULL|Le résumé de l'article|
+|content|longue chaîne de caractères|NOT NULL|Le contenu de l'article|
+|published</em>date|date avec heure minutes et secondes|NOT NULL, DEFAULT CURRENT_TIMESTAMP|La date de publication de l'article|<br />
+|views|entier|NOT NULL, UNSIGNED, DEFAULT 0|Le nombre de vues de l'article|</p>

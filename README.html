@@ -1,0 +1,45 @@
+<h1 id="challenge--découverte-sql">Challenge : Découverte SQL</h1>
+<h2 id="création-base-de-données-bdd-et-tables">Création base de données (BDD) et tables</h2>
+<p>Nom de la database : <code>oblog</code></p>
+<h3 id="1-dictionnaire-de-données-notebook">1. Dictionnaire de données 📓</h3>
+<p>|Champ|Type|Spécificités|Description|<br />
+|-|-|-|-|<br />
+|nom<em>du</em>champ|VARCHAR(255)|NULL, valeur par défaut, INDEX, etc.|Que contient ce champ, si besoin de préciser.|<br />
+|etc.|…|…|…|</p>
+<p>Dans le fichier <code>structure-donnees.md</code>, nous fournissons les données pour chaque entité (table) du projet <em>oBlog</em>.  <br />
+Cependant, le type de donnée de chaque champ est volontairement vague.  <br />
+:pencil: Ainsi, ce sera à toi, dans ce dictionnaire et à l'étape suivante de définir le type précis (par exemple INT, VARCHAR(255), etc.).</p>
+<h3 id="2-création-hammer">2. Création 🔨</h3>
+<p>Une fois tes tables définies, crée-les dans MySQL à l'aide d'Adminer.  <br />
+:pencil:  <strong>Créer via Adminer</strong> la base de données et les 3 tables précédemment décrites.</p>
+<h2 id="insertion-de-données-pencil2">Insertion de données ✏️</h2>
+<p>Intégrer des données via l'interface d'Adminer.  <br />
+:pencil:  <strong>Insérer des données d'exemple</strong> (Le fichier <code>contenus.md</code> en contient déjà, intégre-les, ils te serviront à comprendre le type des champs attendu, puis n'hésite pas à en ajouter d'autres).</p>
+<h2 id="requêtes-sql-computer">Requêtes SQL 💻</h2>
+<p>:pencil: <strong>Écrire les requêtes SQL</strong> permettant d'obtenir les résultats suivants, reporter les requêtes SQL dans un fichier <code>requetes.md</code> <em>(à pusher)</em>.</p>
+<blockquote>
+  <p>Tu devrais avoir un minimum de données dans tes tables pour que la requête soit pertinente.</p>
+</blockquote>
+<ul>
+<li><strong>Auteurs</strong><ul>
+<li>Lister les auteurs</li>
+<li>Afficher l'auteur ayant l'id 2</li></ul></li>
+<li><strong>Articles</strong><ul>
+<li>Lister tous les articles</li>
+<li>Afficher l'article ayant l'id 1</li></ul></li>
+</ul>
+<h2 id="bonus-sql">Bonus SQL</h2>
+<p>C'est le moment d'apprendre seul à utiliser le langage SQL.  <br />
+Tu as de la chance, il y a une doc super bien expliquée et français ! 🎉 =&gt; https://sql.sh/</p>
+<p>:pencil: <strong>Écrire les requêtes SQL</strong> permettant d'obtenir les résultats suivants, reporter les requêtes SQL dans un fichier <code>requetes.md</code> <em>(à pusher)</em>.</p>
+<ul>
+<li><strong>Auteurs</strong></li>
+<li>Lister les auteurs par ordre alphabétique (sur le nom) (<a href="https://sql.sh/cours/order-by">doc</a>)</li>
+<li>Lister les auteurs dont l'e-mail contient <em>@gmail.com</em> (<a href="https://sql.sh/cours/where/like/wildcards">doc</a>)</li>
+<li>Lister les auteurs qui n'ont pas d'image de profil (<a href="https://sql.sh/cours/where/is">doc</a>)</li>
+<li><strong>Articles</strong></li>
+<li>Lister le titre et la date de publication de tous les articles (<a href="https://sql.sh/cours/select">doc</a>)</li>
+<li>Afficher le titre d'un article en particulier (en passant l'<code>id</code> de l'article) (<a href="https://sql.sh/cours/where">doc</a>)</li>
+<li>Lister les 2 derniers articles publiés (<a href="https://sql.sh/cours/order-by">doc</a> &amp; <a href="https://sql.sh/cours/limit">doc</a>)</li>
+<li>Compter le nombre d'articles (<a href="https://sql.sh/fonctions/agregation/count">doc</a>) et renommer la colonne en <code>nbArticles</code> (<a href="https://sql.sh/cours/alias">doc</a>)</li>
+</ul>
